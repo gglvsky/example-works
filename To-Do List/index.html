@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header-background"></div>
+    <main class="to-do-list">
+        <h1>TO DO</h1>
+        <div class="task-input">
+            <input type="text" placeholder="Currently typing" class="task-enter-field" id="taskEnterField">
+            <input type="button" value="Add" class="add-a-task" onclick="addingTask()">
+        </div>
+        <div class="task-container">
+            <ul class="list-of-tasks" id="taskList">
+                <!-- задачи вставляются динамически -->
+            </ul>
+            <div class="below-menu">
+                <p id="itemsLeft">0 items left</p>
+                <ul class="task-options">
+                    <li><input type="button" value="All" onclick="filterTasks('all')"></li>
+                    <li><input type="button" value="Active" onclick="filterTasks('active')"></li>
+                    <li><input type="button" value="Completed" onclick="filterTasks('completed')"></li>
+                </ul>
+                <input type="button" value="Clear Completed" onclick="filterTasks('clearCompleted')">
+            </div>
+        </div>
+        <p>Drag and drop to reorder list</p>
+        <button id="toggleTheme" class="toggle-theme">Switch theme</button>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
